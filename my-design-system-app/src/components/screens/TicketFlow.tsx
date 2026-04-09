@@ -13,25 +13,23 @@ import {
 } from "@/lib/eventApp";
 
 const assets = {
-  detailArtist1: "https://www.figma.com/api/mcp/asset/95f969bd-7919-4c32-bd14-a829490a0bd5",
-  detailArtist2: "https://www.figma.com/api/mcp/asset/ec8d9579-33f6-4b8b-8709-aa1c9ed29aaf",
-  detailCloseButton: "https://www.figma.com/api/mcp/asset/580f9ab0-c6c1-40ac-817d-919d677c216e",
-  detailFavorite: "https://www.figma.com/api/mcp/asset/fac3a7b2-47e4-4056-9ed3-b134c62d8acc",
-  detailHero: "https://www.figma.com/api/mcp/asset/47d97d65-9c62-43d1-a24c-c3d11c76c95a",
-  detailLocationPhoto: "https://www.figma.com/api/mcp/asset/b059f63c-80a4-418e-a1ad-775ca3a00d21",
-  detailPager: "https://www.figma.com/api/mcp/asset/05d5f67c-0617-451b-a509-72957c42d588",
-  detailPagerActive: "https://www.figma.com/api/mcp/asset/55fc19e6-c9ed-4fc8-a66f-aed686b54c73",
-  detailPin: "https://www.figma.com/api/mcp/asset/73997481-86a0-4f47-bf79-a86b70496d58",
+  detailArtist1: "/discover/detail/artist-kenji.jpg",
+  detailArtist2: "/discover/detail/artist-sarah.jpg",
+  detailCloseButton: "/discover/detail/close-button.svg",
+  detailFavorite: "/discover/detail/favorite.svg",
+  detailHero: "/discover/detail/hero.png",
+  detailLocationPhoto: "/discover/detail/location-photo.jpg",
+  detailPagerDots: "/discover/detail/pager.svg",
+  detailPin: "/discover/detail/pin.png",
   previewBand: "/discover/preview-band.png",
-  paymentApplePay: "https://www.figma.com/api/mcp/asset/475f9278-e187-4f34-878f-9bccb4140788",
-  paymentBack: "https://www.figma.com/api/mcp/asset/bc2ab41e-c3c2-47a4-8119-735f23dd7568",
-  paymentGooglePay: "https://www.figma.com/api/mcp/asset/8c126be8-276e-4ff3-bc35-13c948e6c083",
-  paymentSuccess: "https://www.figma.com/api/mcp/asset/3ef12a7c-607c-4e25-943d-5a49b66de28a",
-  ticketAvatar: "https://www.figma.com/api/mcp/asset/6b0d2a36-6d2f-45b9-8eae-6dc9541ed14b",
-  ticketDivider: "https://www.figma.com/api/mcp/asset/1944c6f3-f9a1-46be-836c-6265bd65630e",
-  ticketHero: "https://www.figma.com/api/mcp/asset/0e6c9ea0-fbac-446e-898c-e492bba9a2f1",
-  ticketLiveMusic: "https://www.figma.com/api/mcp/asset/bdd17d26-6c0e-4068-8ad6-330fcf2ae496",
-  ticketLocation: "https://www.figma.com/api/mcp/asset/164b2cc7-4ba8-4190-8e2a-250a95064749",
+  paymentApplePay: "/discover/payment/apple-pay.png",
+  paymentBack: "/discover/payment/back.svg",
+  paymentGooglePay: "/discover/payment/google-pay.png",
+  ticketAvatar: "/profile/avatar.jpg",
+  ticketDivider: "/ticket/divider.svg",
+  ticketHero: "/discover/preview-band.png",
+  ticketLiveMusic: "/ticket/live-music.svg",
+  ticketLocation: "/ticket/location.svg",
 } as const;
 
 function TicketSegment({
@@ -273,12 +271,11 @@ export function EventDetailPage({
           <button className="absolute right-[19px] top-[101px] h-[40px] w-[40px]" onClick={onClose} type="button">
             <img alt="Close detail" className="h-full w-full" src={assets.detailCloseButton} />
           </button>
-          <div className="absolute bottom-[26px] left-1/2 flex -translate-x-1/2 items-center gap-[4px]">
-            <img alt="" className="h-[6px] w-[6px]" src={assets.detailPagerActive} />
-            <img alt="" className="h-[6px] w-[6px]" src={assets.detailPager} />
-            <img alt="" className="h-[6px] w-[6px]" src={assets.detailPager} />
-            <img alt="" className="h-[6px] w-[6px]" src={assets.detailPager} />
-          </div>
+          <img
+            alt=""
+            className="absolute bottom-[26px] left-1/2 h-[6px] w-[36px] -translate-x-1/2"
+            src={assets.detailPagerDots}
+          />
         </div>
 
         <div className="relative -mt-[20px] rounded-t-[20px] bg-white px-[26px] pb-[48px] pt-[32px]">
